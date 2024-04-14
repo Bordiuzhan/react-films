@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import About from "./features/About/About";
+import Home from "./features/Home/Home";
 import Movies from "./features/Movies/Movies";
 import {Provider} from "react-redux";
-import state from "./state";
+import state from "./store";
 import Movie from "./features/Movies/Movie";
+import Support from "./features/Support/Support";
+import Subscriptions from "./features/Subscriptions/Subscriptions";
 
 
 const router = createBrowserRouter([
@@ -17,15 +19,21 @@ const router = createBrowserRouter([
         element: <Provider store={state}><App/></Provider>,
         children: [
             {
-                path: "/about",
-                element: <About/>,
+                path: "/home",
+                element: <Home/>,
             }, {
-                path: "/movies",
+                path: "/movies-and-shows",
                 element: <Movies/>,
+                children: [{
+                    path: `/movies-and-shows/:id`,
+                    element: <Movie/>,
+                },]
             }, {
-                path: `/movies/:id`,
-                element: <Movie/>,
-
+                path: `/support`,
+                element: <Support/>,
+            }, {
+                path: `/subscriptions`,
+                element: <Subscriptions/>,
             }
         ]
     }
