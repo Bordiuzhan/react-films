@@ -14,6 +14,7 @@ function App() {
                 <Outlet/>
                 <h1> HELLO !!</h1>
                 <h1> HELLO !!</h1>
+                <h1> HELLO !!</h1>
             </main>
             <footer>
                 <Footer/>
