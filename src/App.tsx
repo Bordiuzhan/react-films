@@ -12,9 +12,8 @@ function App() {
             </header>
             <main>
                 <Outlet/>
-                <div className={styles.container}>
-                    <h1>App</h1>
-                </div>
+
+                kjhbfikewbvihwb
             </main>
             <footer>
                 <Footer/>
