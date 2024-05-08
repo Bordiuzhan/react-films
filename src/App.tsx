@@ -12,9 +12,9 @@ function App() {
             </header>
             <main>
                 <Outlet/>
-
-                <h1>App</h1>
-
+                <div className={styles.container}>
+                    <h1>App</h1>
+                </div>
             </main>
             <footer>
                 <Footer/>
