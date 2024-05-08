@@ -12,6 +12,7 @@ function App() {
             </header>
             <main>
                 <Outlet/>
+                <h> HELLO !!</h>
             </main>
             <footer>
                 <Footer/>
