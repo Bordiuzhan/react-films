@@ -10,6 +10,7 @@ export interface PageResponse<TResult> {
 
 export interface MovieDetails {
     id: number;
+    genre_ids: number[];
     title: string;
     overview: string;
     popularity: number;
@@ -103,6 +104,14 @@ export const tmdbApi = createApi({
                 return currentArg !== previousArg;
             },
         }),
+        getByGenre: builder.query<MoviesState, number>({
+            query: (genreId:number) => `/discover/movie?with_genres=${genreId}`,
+            transformResponse: (response: PageResponse<MovieDetails>) => ({
+                results: response.results,
+                lastPage: 1,
+                hasMorePages: false,
+            }),
+        }),
         getKeywords: builder.query<KeywordItem[], string>({
             query: (query) => `/search/keyword?query=${query}`,
             transformResponse: (response: PageResponse<KeywordItem>) => response.results,
@@ -114,4 +123,4 @@ export const tmdbApi = createApi({
     }),
 });
 
-export const {useGetMoviesQuery, useGetConfigurationQuery, useGetKeywordsQuery, useGetGenresQuery} = tmdbApi;
+export const {useGetMoviesQuery, useGetConfigurationQuery, useGetKeywordsQuery,  useGetGenresQuery,useGetByGenreQuery} = tmdbApi;

@@ -17,7 +17,6 @@ const Movies = () => {
     const {data: configuration} = useGetConfigurationQuery();
     const {data, isFetching} = useGetMoviesQuery(query);
     const movies = data?.results;
-    console.log(movies)
 
     return (
         <section>
