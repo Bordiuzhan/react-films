@@ -12,7 +12,7 @@ import Movie from "./features/Movies/Movie";
 import Support from "./features/Support/Support";
 import Subscriptions from "./features/Subscriptions/Subscriptions";
 
-
+/*some commit*/
 const router = createBrowserRouter([
     {
         path: "/",
