@@ -1,0 +1,10 @@
+.faqContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.faqColumn {
+  flex: 1 1 48%;
+  min-width: 300px;
+}

@@ -1,0 +1,16 @@
+.container {
+  composes: container from "../../styles/containerStyles.module.scss";
+  margin-top: 170px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+}

@@ -1,0 +1,154 @@
+.container {
+  composes: container from "../../styles/containerStyles.module.scss";
+  margin-top: 150px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapperText {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+
+  h2 {
+    color: var(--Absolute-White, #FFF);
+    font-size: 38px;
+    font-weight: 700;
+  }
+
+  .paragraph {
+    color: var(--Grey-60, #999);
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+.subscriptionPlans {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+
+  .billingToggle {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--Black-15, #262626);
+    background: var(--Black-06, #0F0F0F);
+
+    button {
+      color: var(--Grey-60, #999);
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin: 0 5px;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: var(--Black-12, #1F1F1F);
+      }
+    }
+
+    .active {
+      color: var(--Absolute-White, #FFF);
+      background: var(--Black-12, #1F1F1F);
+    }
+  }
+}
+
+.planContainer {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.plan {
+  flex: 1 1 max(250px, 30%);
+  background-color: #222;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  h3 {
+    color: var(--Absolute-White, #FFF);
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  .price {
+    color: var(--Absolute-White, #FFF);
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+
+  p {
+    color: var(--Grey-60, #999);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    span {
+      color: var(--Grey-60, #999);
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 0.73;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    @media (max-width: 1440px) {
+      flex-direction: column;
+    }
+
+    .freeTrial,
+    .choosePlan {
+      flex: 1;
+      border-radius: 12px;
+      border: 1px solid var(--Black-15, #262626);
+      color: var(--Absolute-White, #FFF);
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.5;
+      padding: 14px;
+      gap: 10px;
+      transition: all 0.3s;
+
+    }
+
+    .freeTrial {
+      background: var(--Black-10, #1A1A1A);
+
+      &:hover {
+        background-color: var(--absolute-black, #000);
+      }
+    }
+
+    .choosePlan {
+      background: var(--Red-45, #E50000);
+
+      &:hover {
+        background-color: var(--red-50, #FF0000)
+      }
+    }
+  }
+}

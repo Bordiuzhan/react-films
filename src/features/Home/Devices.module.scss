@@ -1,0 +1,89 @@
+
+.container {
+  composes: container from "../../styles/containerStyles.module.scss";
+  margin-top: 150px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.text {
+}
+
+.title {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.paragraph {
+  color: var(--grey-60);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.devices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  @media (max-width: 768px) {
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 480px) {
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.device {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.deviceContent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px;
+  border-radius: 12px;
+  border: 1px solid var(--Black-12, #1F1F1F);
+  background: linear-gradient(222deg, rgba(229, 0, 0, 0.50) -208.03%, rgba(229, 0, 0, 0.00) 41.32%), #0F0F0F;
+}
+
+.wrapper {
+  display: flex;;
+  align-items: center;
+  gap: 16px;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 72px;
+  height: 72px;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--Black-12, #1F1F1F);
+  background: var(--Black-08, #141414);
+}
+
+
+.deviceName {
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.deviceDescription {
+  color: var(--Grey-60, #999);
+  font-size: 18px;
+  line-height: 1.5;
+}
