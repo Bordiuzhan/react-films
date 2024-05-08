@@ -12,6 +12,9 @@ function App() {
             </header>
             <main>
                 <Outlet/>
+
+                <h1>App</h1>
+
             </main>
             <footer>
                 <Footer/>
