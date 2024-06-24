@@ -47,6 +47,8 @@ const Home = () => {
       : undefined;
   }
 
+  console.log(movies);
+
   useEffect(() => {
     if (movies && movies.length < 40 && hasMorePages) {
       setQuery((q) => ({ ...q, page: q.page + 1 }));
